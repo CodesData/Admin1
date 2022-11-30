@@ -1,0 +1,163 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site3.master.cs" Inherits="Admin1.Account.Site3" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="author" content="Admin1" />
+    <meta name="description" content="Template Asp.NET" />
+    <meta name="keywords" content="#" />
+    <title><%:Page.Title%>-Admin1</title>
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" type="text/css" href="../Site/assets/bootstrap/css/bootstrap.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" type="text/css" href="../Site/assets/fontawesome/css/all.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="../Site/assets/css/Style.css" />
+    <!-- icon -->
+    <link rel="shortcut icon" href="../Site/images/icon.ico" />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="page">
+    <header>
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../Default.aspx">Admin1</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#"></a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="Default.aspx">
+                                <asp:Label ID="lblUser" runat="server" Text="">
+                                </asp:Label>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <!-- Search -->
+                            <div class="form-inline ml-3">
+                                <div class="input-group input-group-sm">
+                                    <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search" />
+                                    <div class="input-group-append">
+                                        <button class="btn btn-navbar" type="submit">
+                                            <i class="fas fa-search"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- /.Navigation -->
+    </header>
+    <form id="frmContent" runat="server">
+        <div id="content-toggle">
+            <!-- SideMenu -->
+            <div id="sideMenu">
+                <ul class="sideMenu-nav">
+                    <li>
+                        <a href="../Data.aspx">
+                            <span class="fas fa-caret-right fa-fw"></span>&nbsp;&nbsp;Data
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Link.aspx">
+                            <span class="fas fa-caret-right fa-fw"></span>&nbsp;&nbsp;Link
+                        </a>
+                    </li>
+                    <li>
+                        <a href="../Wiki2.aspx">
+                            <span class="fas fa-caret-right fa-fw"></span>&nbsp;&nbsp;Wiki
+                        </a>
+                    </li>
+                    <li class="ul-divider"></li>
+                    <li>
+                        <a href="Users.aspx">
+                            <span class="fas fa-user-friends fa-xs"></span>&nbsp;&nbsp;&nbsp;Users
+                        </a>
+                    </li>
+                    <li>
+                        <a href="SignIn.aspx">
+                            <span class="fas fa-sign-in-alt fa-fw"></span>&nbsp;&nbsp;&nbsp;Sign In
+                        </a>
+                    </li>
+                    <li>
+                        <a href="SignUp.aspx">
+                            <span class="fas fa-user-edit fa-fw"></span>&nbsp;&nbsp;Sign Up
+                        </a>
+                    </li>
+                    <li>
+                        <a href="SignOut.aspx">
+                            <span class="fas fa-sign-out-alt fa-fw"></span>&nbsp;&nbsp;&nbsp;&nbsp;Sign Out
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Page Content -->
+            <div id="pageContent">
+                <div class="container-fluid">
+                    <div class="row">
+                        <!-- Content -->
+                        <div class="col-md-10" id="content">
+                            <asp:ContentPlaceHolder ID="cphContent" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                        <!-- Sidebar -->
+                        <div class="col-md-2" id="sidebar">
+                            <h6>Articles</h6>
+                            <ul class="list-sidebar">
+                                <li><a href="#">Article 1</a></li>
+                                <li><a href="#">Article 2</a></li>
+                            </ul>
+                            <h6>Admin</h6>
+                            <ul class="list-sidebar">
+                                <li><a href="#">Link 1</a></li>
+                                <li><a href="#">Link 2</a></li>
+                            </ul>
+                            <asp:ContentPlaceHolder ID="cphSidebar" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- footer -->
+            <footer class="text-center bg-dark">
+                <!-- Copyright -->
+                <div class="copyright">
+                    <ul class="menu">
+                        <li><a href="Default.aspx">Admin1&nbsp;&copy;&nbsp;<%:DateTime.Now.Year%></a></li>
+                        <li class="icons">
+                            <span><a href="#"><i class="fab fa-twitter"></i></a></span>
+                            <span><a href="#"><i class="fab fa-youtube"></i></a></span>
+                            <span><a href="#"><i class="fab fa-github"></i></a></span>
+                            <span><a href="#"><i class="fab fa-bitbucket"></i></a></span>
+                            <span><a href="#"><i class="fab fa-wikipedia-w"></i></a></span>
+                        </li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+    </form>
+    <!-- jQuery -->
+    <script type="text/javascript" src="../Site/assets/js/jQuery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="../Site/assets/bootstrap/js/bootstrap.js"></script>
+    <script type="text/javascript" src="../Site/assets/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- Menu Toggle -->
+    <script type="text/javascript" src="../Site/assets/js/MenuToggle.js"></script>
+</body>
+</html>
